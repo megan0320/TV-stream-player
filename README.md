@@ -1,1 +1,1 @@
-# TV strean Player app
+# TV stream Player app
