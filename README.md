@@ -1,1 +1,1 @@
-# DTV Player app
+# TV strean Player app
