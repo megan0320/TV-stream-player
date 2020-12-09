@@ -1,0 +1,391 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    >
+    <!--android:padding="@dimen/activity_horizontal_margin"-->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/playMode"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="0dp">
+
+            <TextView
+                android:id="@+id/center_point_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <SurfaceView
+                android:id="@+id/surfv_main_playback_window"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+
+            <ImageView
+                android:id="@+id/subtitle_window"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:clickable="false"
+                android:focusable="false"
+                />
+
+
+
+            <RelativeLayout
+                android:id="@+id/viewgroup_channelbanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/programTxtViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="top|left"
+                    android:layout_centerVertical="true"
+                    android:textSize = "30sp"
+                    android:text="@string/main_chbar_program_title_default"/>
+
+                <TextView
+                    android:id="@+id/programTxtViewLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/programTxtViewTitle"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="100dp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize = "24sp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/main_chbar_loading" />
+
+                <TextView
+                    android:id="@+id/tv_timestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/programTxtViewLoading"
+                    android:layout_centerVertical="true"
+                    android:textColor="@android:color/white"
+                    android:textSize = "24sp"
+                    android:visibility="visible"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgtag_main_signal_strength_0"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_toRightOf="@id/tv_timestamp"
+                    android:layout_centerVertical="true"
+                    android:gravity="top|right"
+                    android:src="@drawable/signal_lvl0" />
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/channel_input_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="30dp"
+                android:textSize = "24sp"
+                android:text = ""
+                android:visibility="invisible"
+                android:background="#80000000"/>
+
+
+            <TextView
+                android:id="@+id/noSignalWarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/str_no_signal"
+                android:background="@android:color/darker_gray"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollMenu"
+        android:layout_width="600sp"
+        android:layout_height="300sp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:fillViewport="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_menu"
+        android:visibility="invisible"
+        >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+            <RelativeLayout
+                android:id="@+id/dialog_menu_viewgroup_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="#FFFFFF"
+                >
+                <TextView
+                    android:id="@+id/dialog_menu_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="36sp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/menu_title"
+                    android:layout_centerHorizontal="true"
+                    />
+                <ImageView
+                    android:id="@+id/dialog_scan_divider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/dialog_menu_title_text"
+                    android:src="@android:color/darker_gray"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/dialog_menu_viewgroup_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dialog_menu_viewgroup_title"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:text="@string/menu_item_scan_title"
+                        />
+                    <Button
+                        android:id="@+id/btn_scan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:text="@string/menu_item_scan_btn"
+                        android:enabled="true"
+                        android:gravity="center" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:text="@string/menu_item_chinfo_title"
+                        />
+                    <Button
+                        android:id="@+id/btn_channel_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:text="@string/menu_item_chinfo_btn"
+                        android:enabled="false"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:text="@string/menu_item_audio_title"
+                        />
+                    <Spinner
+                        android:id="@+id/spinner_audio"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_back"
+                        android:spinnerMode="dropdown" />
+                    <!--
+                    <Button
+                        android:id="@+id/btn_audioSelector"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:enabled="false"
+                        android:text="@string/menu_item_audio_btn"
+                        android:gravity="center"
+                        />-->
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:text="@string/menu_item_subtitle_title"
+                        />
+                    <!--
+                    <Button
+                        android:id="@+id/btn_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:enabled="false"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:text="@string/menu_item_subtitle_btn"
+                        android:saveEnabled="false"
+                        android:gravity="center"
+                        />-->
+                    <Spinner
+                        android:id="@+id/spinner_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_back"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@string/menu_item_timezone_title"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                    <Spinner
+                        android:id="@+id/spinner_main_timezone_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:background="@drawable/spinner_back"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:text="@string/menu_item_version_title"
+                        />
+                    <TextView
+                        android:id="@+id/txt_version_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:textColor="@android:color/black"
+                        android:layout_weight="1"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center"
+                        android:text="@string/menu_item_version" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/black"
+                        android:text="@string/menu_item_reset_title"
+                        android:visibility="gone"
+                        />
+                    <Button
+                        android:id="@+id/btn_reset"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:text="@string/menu_item_reset"
+                        android:gravity="center"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

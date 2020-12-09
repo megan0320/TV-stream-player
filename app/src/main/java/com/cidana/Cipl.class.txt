@@ -1,0 +1,556 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package com.cidana.cipl;
+
+import com.cidana.verificationlibrary.CiChannelCollector;
+import com.cidana.verificationlibrary.CiSmsRegisterLibrary;
+import com.cidana.verificationlibrary.VersionManager;
+import com.cidana.verificationlibrary.CiSmsRegisterLibrary.SmsVerificationListener;
+import com.cidana.verificationlibrary.CiVerificationLibraryDefines.CommandListener;
+import com.cidana.verificationlibrary.VersionManager.VersionManagerListener;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+
+public class Cipl implements CiplCallback, SmsVerificationListener, VersionManagerListener, CommandListener {
+    private long m_manager = 0L;
+    private long m_library = 0L;
+    private char m_escape = 0;
+    private Cipl.NotifyThread m_notifier = new Cipl.NotifyThread();
+    private CiplCallback uiCallback = null;
+    private boolean m_asyncNotify = true;
+    private Cipl.CiSmsRegisterResult m_smsreglib = null;
+    private Cipl.CiVersionResult m_versionlib = null;
+    private Cipl.CiChannelInfoResult m_channelCollector = null;
+    private Object m_context = null;
+
+    public Cipl() {
+    }
+
+    public void eventCallback(String[] var1) {
+        if (this.m_asyncNotify && this.m_notifier != null) {
+            this.m_notifier.postMessage(var1);
+        } else if (this.uiCallback != null) {
+            this.uiCallback.eventCallback(var1);
+        }
+
+    }
+
+    public void subtitleCallback(int[] var1, int var2, int var3, int var4, boolean var5) {
+        if (this.uiCallback != null) {
+            this.uiCallback.subtitleCallback(var1, var2, var3, var4, var5);
+        }
+
+    }
+
+    public void videoFrameCallback(String var1, long[] var2, int var3, int var4, int[] var5) {
+        if (this.uiCallback != null) {
+            this.uiCallback.videoFrameCallback(var1, var2, var3, var4, var5);
+        }
+
+    }
+
+    public CiplError loadLibrary(String var1) {
+        if (this.m_library != 0L) {
+            this.freeLibrary();
+        }
+
+        this.m_library = this.NLoadLibrary(var1);
+        return this.m_library == 0L ? CiplError.CI_EFAIL : CiplError.CI_SOK;
+    }
+
+    public CiplError freeLibrary() {
+        if (this.m_library == 0L) {
+            return CiplError.CI_EUNEXPECTED;
+        } else {
+            int var1 = this.NFreeLibrary(this.m_library);
+            this.m_library = 0L;
+            return CiplError.getError(var1);
+        }
+    }
+
+    public CiplError createManager() {
+        if (this.m_library != 0L && this.m_manager == 0L) {
+            this.m_manager = this.NCreateManager(this.m_library);
+            return this.m_manager == 0L ? CiplError.CI_EFAIL : CiplError.CI_SOK;
+        } else {
+            return CiplError.CI_EUNEXPECTED;
+        }
+    }
+
+    public CiplError destroyManager() {
+        if (this.m_manager == 0L) {
+            return CiplError.CI_EUNEXPECTED;
+        } else {
+            int var1 = this.NDestroyManager(this.m_manager);
+            this.m_manager = 0L;
+            return CiplError.getError(var1);
+        }
+    }
+
+    public CiplError openManager(Object var1, char var2) {
+        if (this.m_manager == 0L) {
+            return CiplError.CI_EUNEXPECTED;
+        } else {
+            this.m_context = var1;
+            this.m_escape = var2;
+            if (this.m_notifier != null) {
+                this.m_notifier.start();
+            }
+
+            return CiplError.getError(this.NOpenManager(this.m_manager, 0, var2));
+        }
+    }
+
+    public CiplError closeManager() {
+        if (this.m_manager == 0L) {
+            return CiplError.CI_EUNEXPECTED;
+        } else {
+            if (this.m_notifier != null) {
+                this.m_notifier.exit();
+            }
+
+            return CiplError.getError(this.NCloseManager(this.m_manager));
+        }
+    }
+
+    public CiplError setEventCallback(CiplCallback var1) {
+        return this.setEventCallback(var1, true);
+    }
+
+    public CiplError setEventCallback(CiplCallback var1, boolean var2) {
+        if (this.m_manager == 0L) {
+            return CiplError.CI_EUNEXPECTED;
+        } else {
+            this.m_asyncNotify = var2;
+            this.uiCallback = var1;
+            return CiplError.getError(this.NSetEventCallback(this.m_manager, (CiplCallback)(var1 != null && this.m_notifier == null ? var1 : this)));
+        }
+    }
+
+    public CiplError setWindow(String var1, Object var2) {
+        return this.m_manager == 0L ? CiplError.CI_EUNEXPECTED : CiplError.getError(this.NSetWindow(this.m_manager, var1, var2));
+    }
+
+    public CiplError setDisplayWindow(String var1, String var2, Object var3) {
+        return this.m_manager == 0L ? CiplError.CI_EUNEXPECTED : CiplError.getError(this.NSetDisplayWindow(var1, this.m_manager, var2, var3));
+    }
+
+    public CiplError setWindow(String var1, String var2) {
+        return this.m_manager == 0L ? CiplError.CI_EUNEXPECTED : this.convertReturnToError(this.execute(var1, "sethwnd internal " + var2));
+    }
+
+    public String getMgrEnv(String var1) {
+        return this.m_manager == 0L ? null : this.NGetMgrEnv(this.m_manager, var1);
+    }
+
+    public CiplError setMgrEnv(String var1, String var2) {
+        return this.m_manager == 0L ? CiplError.CI_EUNEXPECTED : CiplError.getError(this.NSetMgrEnv(this.m_manager, var1, var2));
+    }
+
+    public CiplError createSession(String var1, int var2) {
+        if (this.m_manager == 0L) {
+            return CiplError.CI_EUNEXPECTED;
+        } else {
+            int var3 = this.NCreateSession(this.m_manager, var1, var2);
+            return CiplError.getError(var3);
+        }
+    }
+
+    public CiplError destroySession(String var1) {
+        return this.m_manager == 0L ? CiplError.CI_EUNEXPECTED : CiplError.getError(this.NDestroySession(this.m_manager, var1));
+    }
+
+    public String[] execute(String var1, String var2) {
+        if (this.m_manager == 0L) {
+            String[] var3 = new String[]{CiplError.CI_EUNEXPECTED.errname(), "", ""};
+            return var3;
+        } else {
+            return this.NExecute(this.m_manager, var1, var2);
+        }
+    }
+
+    public CiplError convertReturnToError(String[] var1) {
+        if (var1 == null) {
+            return CiplError.CI_EFAIL;
+        } else {
+            return var1[0] != null && var1[0].length() != 0 ? CiplError.getError(var1[0]) : CiplError.CI_SOK;
+        }
+    }
+
+    public CiplError registerPhoneNum(String var1, String var2) {
+        if (!this.prepareSmsRegister(this.m_context, var1)) {
+            return CiplError.CI_ELICENSE;
+        } else {
+            int var3;
+            if (var2 == null) {
+                var3 = this.m_smsreglib.checkSmsRegisterStatusAsync(this);
+                return var3 != 0 ? CiplError.getError(var3) : CiplError.CI_SOK;
+            } else {
+                this.m_smsreglib.setPhoneNumber(var2);
+                var3 = this.m_smsreglib.requestSMSVerificationCodeAsync(this);
+                return var3 != 0 ? CiplError.getError(var3) : CiplError.CI_SOK;
+            }
+        }
+    }
+
+    private String getOEMId(String var1) {
+        return "OemId";
+    }
+
+    private Cipl.CiplTunerType getTunerType(String var1) {
+        if (this.m_manager != 0L && var1 != null) {
+            String[] var2 = this.NExecute(this.m_manager, var1, "get tunertype");
+            if (CiplError.getError(var2[0]).succeeded()) {
+                CSplitBlob var3 = new CSplitBlob(var2[1], this.m_escape);
+                return Cipl.CiplTunerType.getTunerType(var3.getItem(0, 0));
+            } else {
+                return Cipl.CiplTunerType.CIPL_TUNER_UNKNOWN;
+            }
+        } else {
+            return Cipl.CiplTunerType.CIPL_TUNER_UNKNOWN;
+        }
+    }
+
+    private boolean prepareSmsRegister(Object var1, String var2) {
+        if (this.m_smsreglib == null) {
+            this.m_smsreglib = new Cipl.CiSmsRegisterResult(var1);
+        }
+
+        if (this.m_manager == 0L) {
+            return false;
+        } else {
+            this.m_smsreglib.setTunerType(this.getTunerType(var2).typeCode());
+            String var3 = this.getOEMId(var2);
+            return var3 == null ? false : this.m_smsreglib.setOemId(var3);
+        }
+    }
+
+    public void onFinished(int var1, String var2) {
+        this.m_smsreglib.errorCode = var1;
+        this.m_smsreglib.errorDescription = var2;
+        String[] var3 = new String[]{"", null};
+        if (var1 == 0) {
+            var3[1] = "CIPL_SDK_RegisterSuccess\t0\t" + var2;
+        } else {
+            var3[1] = "CIPL_SDK_RegisterFailed\t" + var1 + "\t" + var2;
+        }
+
+        this.eventCallback(var3);
+    }
+
+    public void onStatus(int var1, String var2, int var3, String var4) {
+        this.m_smsreglib.errorCode = var1;
+        this.m_smsreglib.errorDescription = var2;
+        String[] var5;
+        if (var1 != 0) {
+            var5 = new String[]{"", "CIPL_SDK_RegisterFailed\t" + var1 + "\t" + var2};
+            this.eventCallback(var5);
+        }
+
+        this.m_smsreglib.verified = true;
+        if (var3 == 0) {
+            this.m_smsreglib.resultPass = true;
+        } else {
+            this.m_smsreglib.resultPass = false;
+        }
+
+        var5 = new String[]{"", "CIPL_SDK_RegisterStatus\t" + var3 + "\t" + var4};
+        this.eventCallback(var5);
+    }
+
+    public boolean retrieveVersionInfo(String var1, String var2) {
+        if (this.m_versionlib == null) {
+            this.m_versionlib = new Cipl.CiVersionResult(this.m_context);
+        }
+
+        if (this.m_versionlib != null && this.m_manager != 0L && !this.m_versionlib.isRetrieving) {
+            String var3 = this.getOEMId(var1);
+            if (var2 != null) {
+                var2 = "appid:" + var2;
+                var3 = var3 + ";" + var2;
+            }
+
+            this.m_versionlib.setParameters("oemid:" + var3);
+            this.m_versionlib.isRetrieving = true;
+            return this.m_versionlib.getVersionAynsc(this) == 0;
+        } else {
+            return false;
+        }
+    }
+
+    public void onVersionCheckFinished(int var1, String var2) {
+        this.m_versionlib.errorCode = var1;
+        this.m_versionlib.description = var2;
+        String[] var3 = new String[]{"", null};
+        if (var1 == 0) {
+            var3[1] = "CIPL_SDK_VersionStr\t" + var2;
+            this.m_versionlib.isRetrieved = true;
+        } else {
+            var3[1] = "CIPL_SDK_VersionErr\t" + var1;
+        }
+
+        this.eventCallback(var3);
+        this.m_versionlib.isRetrieving = false;
+    }
+
+    public boolean isChannelInfoUploaded(String var1, String var2) {
+        if (this.m_channelCollector == null) {
+            this.m_channelCollector = new Cipl.CiChannelInfoResult(this.m_context);
+        }
+
+        return this.m_channelCollector.checkExistsAsync(var2, this) == 0;
+    }
+
+    public boolean uploadChannelInfo(String var1, String var2) {
+        if (this.m_channelCollector == null) {
+            this.m_channelCollector = new Cipl.CiChannelInfoResult(this.m_context);
+        }
+
+        return this.m_channelCollector.uploadAsync(var2, this) == 0;
+    }
+
+    public void onCommandFinished(String var1, String var2, String var3, String var4) {
+        if (var1 != null && var2 != null && var3 != null && var4 != null) {
+            boolean var5 = true;
+
+            int var8;
+            try {
+                var8 = Integer.valueOf(var2);
+            } catch (NumberFormatException var7) {
+                return;
+            }
+
+            String[] var6 = new String[]{"", null};
+            if (var1.equals("is_channel_info_exists")) {
+                if (var8 == 0) {
+                    var6[1] = "CIPL_SDK_CheckChannelInfoExists\t" + var4;
+                } else {
+                    var6[1] = "CIPL_SDK_CheckChannelInfoExists\t" + var2;
+                }
+            } else {
+                if (!var1.equals("upload_channel_info")) {
+                    return;
+                }
+
+                var6[1] = "CIPL_SDK_ChannelInfoUpload\t" + var2;
+            }
+
+            this.eventCallback(var6);
+        }
+    }
+
+    public static void printBlob(String var0) {
+        (new CSplitBlob(var0)).print();
+    }
+
+    public static void printBlob(String var0, char var1) {
+        (new CSplitBlob(var0, var1)).print();
+    }
+
+    private native long NLoadLibrary(String var1);
+
+    private native int NFreeLibrary(long var1);
+
+    private native long NCreateManager(long var1);
+
+    private native int NDestroyManager(long var1);
+
+    private native int NOpenManager(long var1, int var3, int var4);
+
+    private native int NCloseManager(long var1);
+
+    private native int NSetEventCallback(long var1, CiplCallback var3);
+
+    private native String NGetMgrEnv(long var1, String var3);
+
+    private native int NSetMgrEnv(long var1, String var3, String var4);
+
+    private native int NSetWindow(long var1, String var3, Object var4);
+
+    private native int NSetDisplayWindow(String var1, long var2, String var4, Object var5);
+
+    private native int NCreateSession(long var1, String var3, int var4);
+
+    private native int NDestroySession(long var1, String var3);
+
+    private native String[] NExecute(long var1, String var3, String var4);
+
+    private native void NPrint(String var1);
+
+    static {
+        System.loadLibrary("CiplJni");
+    }
+
+    class NotifyThread extends Thread {
+        private List<String[]> msgQueue = Collections.synchronizedList(new LinkedList());
+        private boolean exit = false;
+
+        NotifyThread() {
+        }
+
+        public void postMessage(String[] var1) {
+            this.msgQueue.add(var1);
+        }
+
+        public void clearMessage() {
+            this.msgQueue.clear();
+        }
+
+        public void exit() {
+            this.exit = true;
+        }
+
+        public void start() {
+            this.exit = false;
+            super.start();
+        }
+
+        public void run() {
+            while(!this.exit) {
+                if (this.msgQueue.size() > 0) {
+                    String[] var1 = (String[])this.msgQueue.remove(0);
+                    if (Cipl.this.uiCallback != null && var1 != null) {
+                        Cipl.this.uiCallback.eventCallback(var1);
+                    }
+                } else {
+                    try {
+                        sleep(1L);
+                    } catch (InterruptedException var2) {
+                        var2.printStackTrace();
+                    }
+                }
+            }
+
+        }
+    }
+
+    public static enum CiplTunerType {
+        CIPL_TUNER_NONE("None", -101),
+        CIPL_TUNER_UNKNOWN("Unknown", -1),
+        CIPL_TUNER_INTEGRATED("Integrated", 0),
+        CIPL_TUNER_USB("USB", 1),
+        CIPL_TUNER_WIRELESS("Wireless", 2),
+        CIPL_TUNER_STREAMING("Streaming", 104),
+        CIPL_TUNER_FILE("File", 105);
+
+        private final String typeName;
+        private final int typeCode;
+
+        private CiplTunerType(String var3, int var4) {
+            this.typeName = var3;
+            this.typeCode = var4;
+        }
+
+        public int typeCode() {
+            return this.typeCode;
+        }
+
+        public String typeName() {
+            return this.typeName;
+        }
+
+        public static int getCode(String var0) {
+            Cipl.CiplTunerType[] var1 = values();
+            int var2 = var1.length;
+
+            for(int var3 = 0; var3 < var2; ++var3) {
+                Cipl.CiplTunerType var4 = var1[var3];
+                if (var4.typeName.equalsIgnoreCase(var0)) {
+                    return var4.typeCode;
+                }
+            }
+
+            return CIPL_TUNER_UNKNOWN.typeCode();
+        }
+
+        public static String getName(int var0) {
+            Cipl.CiplTunerType[] var1 = values();
+            int var2 = var1.length;
+
+            for(int var3 = 0; var3 < var2; ++var3) {
+                Cipl.CiplTunerType var4 = var1[var3];
+                if (var4.typeCode == var0) {
+                    return var4.typeName;
+                }
+            }
+
+            return CIPL_TUNER_UNKNOWN.typeName();
+        }
+
+        public static Cipl.CiplTunerType getTunerType(String var0) {
+            Cipl.CiplTunerType[] var1 = values();
+            int var2 = var1.length;
+
+            for(int var3 = 0; var3 < var2; ++var3) {
+                Cipl.CiplTunerType var4 = var1[var3];
+                if (var4.typeName.equalsIgnoreCase(var0)) {
+                    return var4;
+                }
+            }
+
+            return CIPL_TUNER_UNKNOWN;
+        }
+
+        public static Cipl.CiplTunerType getError(int var0) {
+            Cipl.CiplTunerType[] var1 = values();
+            int var2 = var1.length;
+
+            for(int var3 = 0; var3 < var2; ++var3) {
+                Cipl.CiplTunerType var4 = var1[var3];
+                if (var4.typeCode == var0) {
+                    return var4;
+                }
+            }
+
+            return CIPL_TUNER_UNKNOWN;
+        }
+    }
+
+    private class CiChannelInfoResult extends CiChannelCollector {
+        boolean isRetrieving = false;
+        boolean isRetrieved = false;
+        int errorCode = 0;
+        String description = "";
+
+        public CiChannelInfoResult(Object var2) {
+            super(var2);
+        }
+    }
+
+    private class CiVersionResult extends VersionManager {
+        boolean isRetrieving = false;
+        boolean isRetrieved = false;
+        int errorCode = 0;
+        String description = "";
+
+        public CiVersionResult(Object var2) {
+            super(var2);
+        }
+    }
+
+    private class CiSmsRegisterResult extends CiSmsRegisterLibrary {
+        public static final int CIPL_TUNER_TYPE_NONE = -101;
+        public static final int CIPL_TUNER_TYPE_UNKNOWN = -1;
+        public static final int CIPL_TUNER_TYPE_INTEGRATED = 0;
+        public static final int CIPL_TUNER_TYPE_USB = 1;
+        public static final int CIPL_TUNER_TYPE_WIRELESS = 2;
+        public static final int CIPL_TUNER_TYPE_STREAMING = 104;
+        public static final int CIPL_TUNER_TYPE_FILE = 105;
+        boolean verified = false;
+        boolean resultPass = false;
+        int errorCode = 0;
+        String errorDescription = "";
+
+        public CiSmsRegisterResult(Object var2) {
+            super(var2);
+        }
+
+        public boolean registerPass() {
+            return !this.verified || this.resultPass;
+        }
+    }
+}

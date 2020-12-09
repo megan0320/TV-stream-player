@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content"
+    android:background="#B3ffffff"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/dialog_menu_viewgroup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFFFFF"
+        >
+        <TextView
+            android:id="@+id/dialog_menu_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="36sp"
+            android:textColor="@android:color/black"
+            android:text="Menu"
+            android:layout_centerHorizontal="true"
+            />
+        <ImageView
+            android:id="@+id/dialog_scan_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/dialog_menu_title_text"
+            android:src="@android:color/darker_gray"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/dialog_menu_viewgroup_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_menu_viewgroup_title"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="#FFFFFF"
+        >
+
+        <TextView
+            android:id="@+id/center_point"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp" />
+
+        <RelativeLayout
+            android:id="@+id/dialog_menu_viewgroup_content_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@id/center_point"
+            >
+
+            <TextView
+                android:id="@+id/txt_time_zone"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Time Zone"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/txt_channel_info"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/txt_time_zone"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="Channel Info"
+                />
+            <TextView
+                android:id="@+id/txt_MTS"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="16sp"
+                android:layout_below="@id/txt_channel_info"
+                android:textColor="@android:color/black"
+                android:text="MTS"
+                />
+            <TextView
+                android:id="@+id/txt_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="16sp"
+                android:layout_below="@id/txt_MTS"
+                android:textColor="@android:color/black"
+                android:text="Subtitle"
+                />
+            <TextView
+                android:id="@+id/txt_summer_time"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="16sp"
+                android:layout_below="@id/txt_subtitle"
+                android:textColor="@android:color/black"
+                android:text="Summer Time"
+                />
+            <TextView
+                android:id="@+id/txt_version"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="16sp"
+                android:layout_below="@id/txt_summer_time"
+                android:textColor="@android:color/black"
+                android:text="Version"
+                />
+            <TextView
+                android:id="@+id/txt_reset_defualt"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="16sp"
+                android:layout_below="@id/txt_version"
+                android:textColor="@android:color/black"
+                android:text="Reset Defualt"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/dialog_menu_viewgroup_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/center_point">
+
+            <ToggleButton
+                android:id="@+id/btn_time_zone"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:enabled="false"
+                android:text="time zone" />
+            <Button
+                android:id="@+id/btn_channel_info"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/btn_time_zone"
+                android:layout_alignParentLeft="true"
+                android:enabled="false"
+                android:text="channel info" />
+            <Button
+                android:id="@+id/btn_mts"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/btn_channel_info"
+                android:layout_alignParentLeft="true"
+                android:enabled="false"
+                android:text="mts" />
+            <Button
+                android:id="@+id/btn_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/btn_mts"
+                android:layout_alignParentLeft="true"
+                android:enabled="false"
+                android:text="subtitle" />
+            <Button
+                android:id="@+id/btn_summer_time"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@id/btn_subtitle"
+                android:layout_alignParentLeft="true"
+                android:enabled="false"
+                android:text="summer time" />
+            <Button
+                android:id="@+id/btn_version_info"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/btn_summer_time"
+                android:layout_alignParentLeft="true"
+                android:enabled="false"
+                android:text="version" />
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_below="@+id/btn_version_info"
+                android:layout_alignParentLeft="true"
+                android:onClick="resetDefault"
+                android:enabled="false"
+                android:text="reset defualt" />
+
+        </RelativeLayout>
+    </RelativeLayout>>
+
+</RelativeLayout>

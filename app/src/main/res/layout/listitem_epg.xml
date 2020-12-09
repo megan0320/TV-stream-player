@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/listitem_file_text_bg">
+    <HorizontalScrollView
+        android:id="@+id/horscrlv_epg_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:clickable="false"
+        android:fadingEdgeLength="4dp"
+        android:scrollbars="none">
+        <TextView
+            android:id="@+id/txtv_epg_list_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:textColor="@color/listitem_file_text_color"/>
+    </HorizontalScrollView>
+</RelativeLayout>

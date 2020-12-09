@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txtv_file_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:singleLine="true"
+    android:ellipsize="marquee"
+    android:textSize="14sp"
+    android:background="@drawable/listitem_file_text_bg"
+    android:textColor="@color/listitem_file_text_color">
+</TextView>

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a5dce233578099b211e34e215977f4f8c"><param name="Name" value="[static initializer]"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#ac6b5c9a60a64ad16570da6bae9bbe70e"><param name="Name" value="adjustValue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a655134b3210e898fdaf3afca41a4ada3"><param name="Name" value="CiplSession"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ad68eb812972a921bbb8652b9f6667b2f"><param name="Name" value="closeManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a87c4bd5e9cb50590c3ff454d7839b08b"><param name="Name" value="closeSource"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html"><param name="Name" value="com::cidana::cipl::Cipl"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a5dce233578099b211e34e215977f4f8c"><param name="Name" value="[static initializer]"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ad68eb812972a921bbb8652b9f6667b2f"><param name="Name" value="closeManager"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ab4de282c020e278f939022125b35ca09"><param name="Name" value="convertReturnToError"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ae02686d5344e067244bac520e4e534c5"><param name="Name" value="createManager"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a82e07dddc7c1863f10402fcadf531173"><param name="Name" value="createSession"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a8637e00f28dd1c29cb9d72465dd6a893"><param name="Name" value="destroyManager"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a6842a799b88dbf2f6ff4755859eb5842"><param name="Name" value="destroySession"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a4ffc2f66db0c47ecd0070906fccf010c"><param name="Name" value="eventCallback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a315583a23a4ecec0505da36521d699a8"><param name="Name" value="execute"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a0fef1ce4cc667df78ca1f981468f5d1a"><param name="Name" value="freeLibrary"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ae00f4b09e8af3faaca46acd288f3b499"><param name="Name" value="getMgrEnv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a8ffe01726de5f85c5946a6de25b54a87"><param name="Name" value="loadLibrary"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#af75b0461f186d9e5b4ed7f59619e2f50"><param name="Name" value="openManager"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a2d9b6e69c01ec193612a52bafedcaf85"><param name="Name" value="printBlob"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a172d3c9af2b1c1b87e0efca14d007c1c"><param name="Name" value="setEventCallback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ab23b85eea563080ce300372e5ebe062d"><param name="Name" value="setMgrEnv"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a1ba17ac80b639de3edb78e4fdb91ddfd"><param name="Name" value="setWindow"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#adefd02dcf9fd4d73ff3a5130c267cf72"><param name="Name" value="subtitleCallback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#acd30856a33bc567fd09460ee9f635b0f"><param name="Name" value="videoFrameCallback"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="interfacecom_1_1cidana_1_1cipl_1_1_cipl_callback.html"><param name="Name" value="com::cidana::cipl::CiplCallback"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interfacecom_1_1cidana_1_1cipl_1_1_cipl_callback.html#a9e4ee3d086e92e8bdc498a7b557e6022"><param name="Name" value="eventCallback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interfacecom_1_1cidana_1_1cipl_1_1_cipl_callback.html#a4237403764fa2169c763038d007db831"><param name="Name" value="subtitleCallback"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interfacecom_1_1cidana_1_1cipl_1_1_cipl_callback.html#a1436ce119b4dbe8f7493fa2d2d35b9ee"><param name="Name" value="videoFrameCallback"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html"><param name="Name" value="com::cidana::cipl::CiplSession"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#ac6b5c9a60a64ad16570da6bae9bbe70e"><param name="Name" value="adjustValue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a655134b3210e898fdaf3afca41a4ada3"><param name="Name" value="CiplSession"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a87c4bd5e9cb50590c3ff454d7839b08b"><param name="Name" value="closeSource"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a283d8a7b8032b39220d79b17c4e663b5"><param name="Name" value="execute"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a6a6912ceb6117818c6ae401824c83454"><param name="Name" value="getArray"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aea41bb844f15f59ae8992ba1904cd5d4"><param name="Name" value="getRange"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#ae53b027f7b46ccad38a494a754943b41"><param name="Name" value="getString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a1aab5b7b419121e736497211cce5dc3a"><param name="Name" value="getValue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a5f261dd26baaf4ff2b7f87d02b4af77e"><param name="Name" value="openSource"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a463530e0dc8ceb37b95c18efaad32933"><param name="Name" value="pause"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#ae3063a4a9081c7886fd50de3580d28fc"><param name="Name" value="play"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a3c51505645a9a2de2b24028e5a51271e"><param name="Name" value="restoreScan"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a9257dde062db211bd34a386e198eff8f"><param name="Name" value="resume"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a5cc595a101540966d40a125fff38ebdb"><param name="Name" value="select"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a0d29f70ec4d0c3a39e42fe33f526f173"><param name="Name" value="setArray"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a12964cdd858496eb7b1894c7f131467b"><param name="Name" value="setCachePath"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a84cf13e147635e6738a5edd9f64778de"><param name="Name" value="setString"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#acb0c354bc2328e9390e0cbcbaa590bcb"><param name="Name" value="setSurface"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aa07d2b0e4e45b9937f9aafe561c7b57b"><param name="Name" value="setValue"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a8cae5e6b0c4e5f0c57c4b7741ce0cd7c"><param name="Name" value="show"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a5595210936fdea754dc1f039c9765c5e"><param name="Name" value="snapshot"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a78e479736d85a74245193e2d62a41434"><param name="Name" value="start"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a4ed7070c33b205c57ef0e6df5ba41373"><param name="Name" value="startReScanFrequency"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a85de37d20222799dd3ad7e2abeed41b3"><param name="Name" value="startReScanRegion"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a9481c8d9d63fe159113daab5e68518d5"><param name="Name" value="startScanFile"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a056db49b447ff0fca8ac0ec136e65955"><param name="Name" value="startScanFrequency"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a730d6a268ba26b4d3e55ecca8d6c8004"><param name="Name" value="startScanRegion"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a7b62c04be85a6f16bffe665a1d15169b"><param name="Name" value="startSignalTest"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aff8a98c1eebc1c10076273ad532234da"><param name="Name" value="stop"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#af8e216274ef8d7b8fd5a7bd41c2098e6"><param name="Name" value="stopScan"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aa24521b2d9bfbd34a127040b5840c788"><param name="Name" value="stopSignalTest"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a4c967d992c07aec741a499c396f5fb64"><param name="Name" value="storeScan"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a40b763adfccf1e05e980319d6d3caabe"><param name="Name" value="waitFor"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html"><param name="Name" value="com::cidana::cipl::CSplitBlob"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#aabf095d921eac01dbec601bfac2a78c9"><param name="Name" value="CSplitBlob"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#a9f8d659b745fd108a8c4a152c7876bb3"><param name="Name" value="getItem"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#a5e7856c3db01258075551cc03069f626"><param name="Name" value="getNumberCols"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#a821347da4e87e6a122b23c43f2fe5bda"><param name="Name" value="getNumberRows"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#af56bbcc9efc063822449f8da89aceeea"><param name="Name" value="getRow"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#aed2df5870db860f8078b22cf045c76c9"><param name="Name" value="isArray"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#ad607345b28da8284a1688b4ac6d9f9f7"><param name="Name" value="print"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#ad5cb4d1a01e4121a6adf6bba8beb3570"><param name="Name" value="unescapeString"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ab4de282c020e278f939022125b35ca09"><param name="Name" value="convertReturnToError"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ae02686d5344e067244bac520e4e534c5"><param name="Name" value="createManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a82e07dddc7c1863f10402fcadf531173"><param name="Name" value="createSession"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#aabf095d921eac01dbec601bfac2a78c9"><param name="Name" value="CSplitBlob"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a8637e00f28dd1c29cb9d72465dd6a893"><param name="Name" value="destroyManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a6842a799b88dbf2f6ff4755859eb5842"><param name="Name" value="destroySession"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a4ffc2f66db0c47ecd0070906fccf010c"><param name="Name" value="eventCallback"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a4ffc2f66db0c47ecd0070906fccf010c"><param name="Name" value="com::cidana::cipl::Cipl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interfacecom_1_1cidana_1_1cipl_1_1_cipl_callback.html#a9e4ee3d086e92e8bdc498a7b557e6022"><param name="Name" value="com::cidana::cipl::CiplCallback"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a315583a23a4ecec0505da36521d699a8"><param name="Name" value="execute"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a315583a23a4ecec0505da36521d699a8"><param name="Name" value="com::cidana::cipl::Cipl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a283d8a7b8032b39220d79b17c4e663b5"><param name="Name" value="com::cidana::cipl::CiplSession"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a0fef1ce4cc667df78ca1f981468f5d1a"><param name="Name" value="freeLibrary"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a6a6912ceb6117818c6ae401824c83454"><param name="Name" value="getArray"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#a9f8d659b745fd108a8c4a152c7876bb3"><param name="Name" value="getItem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ae00f4b09e8af3faaca46acd288f3b499"><param name="Name" value="getMgrEnv"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#a5e7856c3db01258075551cc03069f626"><param name="Name" value="getNumberCols"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#a821347da4e87e6a122b23c43f2fe5bda"><param name="Name" value="getNumberRows"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aea41bb844f15f59ae8992ba1904cd5d4"><param name="Name" value="getRange"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#af56bbcc9efc063822449f8da89aceeea"><param name="Name" value="getRow"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#ae53b027f7b46ccad38a494a754943b41"><param name="Name" value="getString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a1aab5b7b419121e736497211cce5dc3a"><param name="Name" value="getValue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#aed2df5870db860f8078b22cf045c76c9"><param name="Name" value="isArray"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a8ffe01726de5f85c5946a6de25b54a87"><param name="Name" value="loadLibrary"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#af75b0461f186d9e5b4ed7f59619e2f50"><param name="Name" value="openManager"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a5f261dd26baaf4ff2b7f87d02b4af77e"><param name="Name" value="openSource"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a463530e0dc8ceb37b95c18efaad32933"><param name="Name" value="pause"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#ae3063a4a9081c7886fd50de3580d28fc"><param name="Name" value="play"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#ad607345b28da8284a1688b4ac6d9f9f7"><param name="Name" value="print"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a2d9b6e69c01ec193612a52bafedcaf85"><param name="Name" value="printBlob"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a3c51505645a9a2de2b24028e5a51271e"><param name="Name" value="restoreScan"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a9257dde062db211bd34a386e198eff8f"><param name="Name" value="resume"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a5cc595a101540966d40a125fff38ebdb"><param name="Name" value="select"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a0d29f70ec4d0c3a39e42fe33f526f173"><param name="Name" value="setArray"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a12964cdd858496eb7b1894c7f131467b"><param name="Name" value="setCachePath"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a172d3c9af2b1c1b87e0efca14d007c1c"><param name="Name" value="setEventCallback"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#ab23b85eea563080ce300372e5ebe062d"><param name="Name" value="setMgrEnv"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a84cf13e147635e6738a5edd9f64778de"><param name="Name" value="setString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#acb0c354bc2328e9390e0cbcbaa590bcb"><param name="Name" value="setSurface"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aa07d2b0e4e45b9937f9aafe561c7b57b"><param name="Name" value="setValue"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#a1ba17ac80b639de3edb78e4fdb91ddfd"><param name="Name" value="setWindow"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a8cae5e6b0c4e5f0c57c4b7741ce0cd7c"><param name="Name" value="show"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a5595210936fdea754dc1f039c9765c5e"><param name="Name" value="snapshot"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a78e479736d85a74245193e2d62a41434"><param name="Name" value="start"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a4ed7070c33b205c57ef0e6df5ba41373"><param name="Name" value="startReScanFrequency"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a85de37d20222799dd3ad7e2abeed41b3"><param name="Name" value="startReScanRegion"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a9481c8d9d63fe159113daab5e68518d5"><param name="Name" value="startScanFile"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a056db49b447ff0fca8ac0ec136e65955"><param name="Name" value="startScanFrequency"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a730d6a268ba26b4d3e55ecca8d6c8004"><param name="Name" value="startScanRegion"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a7b62c04be85a6f16bffe665a1d15169b"><param name="Name" value="startSignalTest"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aff8a98c1eebc1c10076273ad532234da"><param name="Name" value="stop"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#af8e216274ef8d7b8fd5a7bd41c2098e6"><param name="Name" value="stopScan"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#aa24521b2d9bfbd34a127040b5840c788"><param name="Name" value="stopSignalTest"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a4c967d992c07aec741a499c396f5fb64"><param name="Name" value="storeScan"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#adefd02dcf9fd4d73ff3a5130c267cf72"><param name="Name" value="subtitleCallback"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#adefd02dcf9fd4d73ff3a5130c267cf72"><param name="Name" value="com::cidana::cipl::Cipl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interfacecom_1_1cidana_1_1cipl_1_1_cipl_callback.html#a4237403764fa2169c763038d007db831"><param name="Name" value="com::cidana::cipl::CiplCallback"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_c_split_blob.html#ad5cb4d1a01e4121a6adf6bba8beb3570"><param name="Name" value="unescapeString"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#acd30856a33bc567fd09460ee9f635b0f"><param name="Name" value="videoFrameCallback"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl.html#acd30856a33bc567fd09460ee9f635b0f"><param name="Name" value="com::cidana::cipl::Cipl"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="interfacecom_1_1cidana_1_1cipl_1_1_cipl_callback.html#a1436ce119b4dbe8f7493fa2d2d35b9ee"><param name="Name" value="com::cidana::cipl::CiplCallback"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classcom_1_1cidana_1_1cipl_1_1_cipl_session.html#a40b763adfccf1e05e980319d6d3caabe"><param name="Name" value="waitFor"></OBJECT>
+</UL>
+</BODY>
+</HTML>

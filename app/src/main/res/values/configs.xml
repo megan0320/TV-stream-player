@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cfg_DtvBridge_model">none</string>
+    <string name ="cust_name">none</string>
+    <string name="cust_version">0</string>
+
+</resources>

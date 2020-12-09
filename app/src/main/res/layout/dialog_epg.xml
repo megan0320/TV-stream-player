@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/dialog_epg_viewgroup_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/dialog_epg_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:textSize="22sp"
+            android:textColor="@android:color/black"
+            android:text="@string/epgdlg_title_epg"/>
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Large"
+            android:id="@+id/dialog_epg_title_wheel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="10dp"
+            android:visibility="invisible"
+            android:progressDrawable="@android:color/darker_gray" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/dialog_epg_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/dialog_epg_viewgroup_title"
+        android:src="@android:color/darker_gray"/>
+
+    <ListView
+        android:id="@+id/lstv_epgdlg_epg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/dialog_epg_divider1"
+        android:choiceMode="singleChoice"/>
+
+    <ImageView
+        android:id="@+id/dialog_epg_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/lstv_epgdlg_epg"
+        android:src="@android:color/darker_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_epg_divider2"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/butn_epg_action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:text="@string/epgdlg_btntxt_refresh"/>
+        <Button
+            android:id="@+id/butn_epg_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/epgdlg_btntxt_ok"/>
+    </LinearLayout>
+</RelativeLayout>
